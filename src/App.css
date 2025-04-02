@@ -24,3 +24,12 @@ html, body {
 .code-font {
   font-family: 'Fira Code', monospace;
 }
+/* Heq scrollbars horizontale dhe vertikale */
+::-webkit-scrollbar {
+  display: none;  /* Heq të gjitha scrollbars */
+}
+
+/* Heq shigjetat e scroll-it */
+::-webkit-scrollbar-button {
+  display: none;
+}
