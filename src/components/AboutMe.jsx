@@ -38,6 +38,7 @@ const particlesConfig = {
     },
   },
 };
+
 const AboutMe = () => {
   const containerRef = useRef(null);
   const [animateIn, setAnimateIn] = useState(false);
@@ -213,21 +214,26 @@ const AboutMe = () => {
           zIndex: 2,
         }}
       >
-        <button
-          style={{
-            backgroundColor: "transparent",
-            color: "#fff",
-            border: "none",
-            padding: "12px 20px",
-            fontSize: "26px",
-            borderRadius: "8px",
-            cursor: "pointer",
-            transition: "background-color 0.3s ease",
-          }}
-          onClick={() => alert("Button Clicked!")}
-        >
-          View Resume
-        </button>
+     <a
+  href="/Anduela_Nurshaba_CV.pdf"  
+  target="_blank"
+  rel="noopener noreferrer"
+  style={{
+    backgroundColor: "transparent",
+    color: "#fff",
+    border: "none",
+    padding: "12px 20px",
+    fontSize: "26px",
+    borderRadius: "8px",
+    cursor: "pointer",
+    transition: "background-color 0.3s ease",
+    textDecoration: "none",
+    textAlign: "center",
+  }}
+>
+  View Resume
+</a>
+
       </div>
       <style>{`
         @media (max-width: 768px) {
