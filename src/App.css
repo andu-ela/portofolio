@@ -1,3 +1,4 @@
+
 * {
   margin: 0;
   padding: 0;
@@ -5,26 +6,21 @@
 }
 
 html, body {
-  overflow: hidden;
-  max-width: 100%;
-  height: 100%;
-}
-
-::-webkit-scrollbar {
-  display: none;
-}
-
-::-webkit-scrollbar-button {
-  display: none;
-}
-
-html {
-  scrollbar-width: none;
-}
-
-.scrollable {
+  min-height: 100%;
+  overflow-x: hidden; 
   overflow-y: auto;
-  max-height: 500px;
+}
+
+body {
+  width: 100%; 
+  height: 100%; 
+  position: relative;
+}
+
+.container {
+  width: 100%;
+  overflow-x: hidden; 
+  position: relative;
 }
 
 @keyframes zoomIn {
@@ -38,3 +34,6 @@ html {
   }
 }
 
+.code-font {
+  font-family: 'Fira Code', monospace;
+}
