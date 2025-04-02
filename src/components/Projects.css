@@ -1,0 +1,209 @@
+/* Seksioni i Projekteve */
+.projects-section {
+    padding: 142px;
+    background: linear-gradient(355deg, rgb(11, 10, 11) 3%, rgb(32, 3, 23) 42%, rgb(38, 0, 52) 60%, rgb(4, 0, 4) 70%);
+    animation: gradient 15s ease infinite;
+    background-size: 400% 400%;
+    background-attachment: fixed;
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+}
+
+/* Titulli i Projekteve */
+.projects-heading {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: transparent;
+    background-image: linear-gradient(90deg, #9b4dff, #f9a6f5, #f62b51);
+    background-clip: text;
+    -webkit-background-clip: text;
+    text-align: center;
+    margin-top: -82px;
+    margin-bottom: 50px;
+}
+
+/* Gridi i Projekteve */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    gap: 60px;
+}
+
+/* Kartela e projektit */
+.project-card {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(152, 35, 241, 0.881);
+    background-color: #222222;
+    transition: transform 0.3s, box-shadow 0.3s;
+    height: 350px; /* Fixed height for all project cards */
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Sigurimi që imazhi të përshtatet brenda kartelës */
+.project-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Crop image to cover entire box */
+    transition: filter 0.3s;
+}
+
+/* Pjesa që shfaqet kur kalon miu */
+.project-details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border-radius: 8px;
+    padding: 16px;
+    visibility: hidden;
+}
+
+/* Pjesa që shfaqet kur kalon miu */
+.project-card:hover .project-details {
+    visibility: visible;
+}
+
+/* Detajet e projektit */
+.project-title {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.project-description {
+    text-align: center;
+    margin-top: 8px;
+    font-size: 12px;
+}
+
+.project-tech {
+    margin-top: 12px;
+    color: cyan;
+    font-size: 12px;
+}
+
+.divider {
+    border-color: gray;
+    margin: 16px 0;
+}
+
+.github-link {
+    display: flex;
+    justify-content: center;
+}
+
+/* Butoni "View More" */
+.view-more-button-container {
+    position: relative;
+    max-width: 100%;
+    bottom: 10px;  
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(to right, #3c1053, #ad5389);
+    padding: 1rem 0;
+    z-index: 2;
+    flex-shrink: 0;
+    margin-top: 30px; 
+}
+
+.view-more-button {
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 26px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.view-more-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 768px) {
+    .projects-heading {
+        font-size: 3rem;
+        margin-top: 2rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 30px;
+    }
+
+    .project-card {
+        width: 100%; /* Full width on smaller screens */
+        margin-top: 1rem;
+        height: 350px; /* Ensure consistent height */
+    }
+
+    .project-title {
+        font-size: 16px;
+    }
+
+    .project-description {
+        font-size: 14px;
+    }
+
+    .project-tech {
+        font-size: 10px;
+    }
+
+    .view-more-button-container {
+        bottom: 0; 
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .projects-heading {
+        font-size: 1.8rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 50px;
+        margin-left: 80px;
+    }
+
+    .project-card {
+        width: 80%; /* Consistent width on smaller screens */
+        height: 350px; /* Ensure consistent height */
+    }
+
+    .project-title {
+        font-size: 14px;
+    }
+
+    .project-description {
+        font-size: 12px;
+    }
+
+    .project-tech {
+        font-size: 10px;
+    }
+
+    .view-more-button-container {
+        bottom: 0; 
+        padding: 1rem;
+    }
+}
